@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook - K1 - M21.5</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+        <div class="subtitle">Asegúrate de tener listos todos los materiales indicados en la DIAPOSITIVA 1 antes de iniciar la misión.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Dar la bienvenida a los niños, presentar el enfoque del día y preparar sus mentes para la actividad.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 2 “Bienvenida” y saluda a los niños mientras muestras el logo de Gnius Club, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Hola, Genios del CODE SQUAD! ¡Bienvenidos a una nueva aventura! Hoy vamos a explorar el Parque de los Insectos Musicales, un lugar maravilloso donde cada insecto toca una melodía única. El director del parque necesita nuestra ayuda para organizar los caminos que llevan a cada insecto. ¡Pero antes, vamos a entrenar nuestros cerebros para usar toda nuestra lógica! ¡Vamos a prepararnos juntos!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 3 "Gimnasio CODE SQUAD" e introduce la importancia de entrenar el cerebro antes de enfrentar el reto del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Equipo CODE SQUAD! Antes de sumergirnos en la música del parque, vamos al Gimnasio del CODE SQUAD para despertar nuestras mentes. Escuchen con atención la canción que vamos a escuchar y los movimientos que nos enseñará. ¡Siguiendo las instrucciones, vamos a preparar nuestra lógica para superar todos los retos! ¡Vamos a activarnos para la misión!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-secuenciacion')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Preparar a los niños para la misión con un ejercicio de algoritmos a través de un baile.</div>
+    </div>
+    <div id="baile-secuenciacion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 4 “Baile de Algoritmos” e introduce la canción que seguiremos hoy.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Excelente, Genios! Ahora vamos a movernos al ritmo de una canción muy especial. En este baile, cada paso nos ayudará a entender cómo seguir un camino, como lo haremos en el Parque de los Insectos Musicales. ¡Escuchen bien las indicaciones y sigan los pasos con mucha energía! ¡Vamos a bailar y a preparar nuestra lógica para la misión!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">🦋 Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Introducir a los niños en el contexto de la misión utilizando la historia.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 5, adopta la actitud de cuenta cuentos y narra la historia.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Genios del CODE SQUAD! Hoy hemos llegado al Parque de los Insectos Musicales, un lugar mágico donde cada insecto toca una melodía especial. Aquí viven la Mariposa Melodiosa, el Grillo Ritmo, la Abeja Armonía y la Libélula Sinfonía, ¡cada uno con su propia música! Pero, ¡oh no! Los caminos que llevan a cada insecto se han desordenado y ahora los visitantes se pierden en el parque. El director del parque necesita nuestra ayuda para organizar los caminos y que todos puedan disfrutar de la música de los insectos. ¿Están listos para este desafío?"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6 y explica el reto para motivar al CODE SQUAD.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Equipo CODE SQUAD! Para que la música del parque siga sonando, vamos a usar nuestra lógica para reconstruir los caminos a cada insecto. Cada camino tendrá un patrón único y vamos a representarlos con fichas de camino. ¡Pero atención! Los caminos no pueden cruzarse y deben llevar a cada insecto de manera ordenada. Con la ayuda de Dart, vamos a crear los caminos más seguros y divertidos para que todos puedan disfrutar de la música. ¡Vamos a trabajar en equipo y usar toda nuestra lógica!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: Formación de Parejas ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Explicar la importancia del trabajo en equipo en parejas y asegurar la organización.</div>
+    </div>
+    <div id="formacion_parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 7 “Formación de Equipos”, explica la importancia de trabajar en equipo y junta a los niños en pares. Si el número es impar, integra un trío para asegurar que todos tengan compañeros.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Genios del CODE SQUAD! Hoy vamos a trabajar en parejas porque, como dice un dicho muy sabio, 'En la unión está la fuerza'. Esto significa que cuando trabajamos juntos, podemos lograr cosas más increíbles y resolver problemas más fácilmente. Al compartir ideas, aprendemos y nos ayudamos mutuamente. Así que, busquen un compañero para formar un equipo y levanten la mano cuando estén listos. Si somos un número impar, no se preocupen, ¡yo los ayudaré a formar un equipo de tres!"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos los niños estén emparejados y organizados para trabajar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¿Todos tienen a su compañero o equipo? ¡Perfecto! Recuerden que trabajar en pareja significa ayudarse, escucharse y apoyarse en cada paso del camino. Con su gran trabajo en equipo, vamos a organizar el Parque de los Insectos Musicales y hacer que todos puedan disfrutar de la música. ¡Prepárense, Genios, vamos a demostrar nuestra lógica y a trabajar juntos!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('codigo_visual')">
+        <div class="title">🎨 Actividad 5: Reto de Codificación ⏰ Tiempo: Variable <span id="activity-5-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir los retos de codificación según la edad y trabajar con fichas de ruta.</div>
+    </div>
+    <div id="codigo_visual" class="content">
+        <table id="activity-5-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('intercambio_construccion')">
+        <div class="title">🔄 Actividad 6: Intercambio de Códigos y Construcción ⏰ Tiempo: Variable <span id="activity-6-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Intercambio de códigos entre equipos y práctica de programación con fichas de ruta.</div>
+    </div>
+    <div id="intercambio_construccion" class="content">
+        <table id="activity-6-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('obstaculo_historia')">
+        <div class="title">⚠️ Actividad 7: Mensaje del Cuartel ⏰ Tiempo: Variable <span id="activity-7-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir un obstáculo en la narrativa para mantener el interés y la motivación.</div>
+    </div>
+    <div id="obstaculo_historia" class="content">
+        <table id="activity-7-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_reflexion')">
+        <div class="title">🏁 Actividad 8: Conclusión de la Historia y Reflexión ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Cierre de la misión y reflexión sobre lo aprendido durante la clase.</div>
+    </div>
+    <div id="conclusion_reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la DIAPOSITIVA 25 y cierra la historia como cuenta cuentos. Realiza preguntas para reflexionar sobre lo aprendido.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                    "¡Lo logramos, CODE SQUAD! Gracias a su increíble trabajo en equipo y a su gran lógica, los caminos del Parque de los Insectos Musicales están perfectamente organizados. El director del parque está muy feliz y agradecido porque ahora todos pueden disfrutar de la música de los insectos sin perderse. ¡Qué gran misión hemos completado! Antes de despedirnos, quiero preguntarles:
+1. ¿Qué aprendimos hoy sobre los insectos musicales y sus caminos?
+2.  ¿Por qué fue importante que los caminos del parque estuvieran bien organizados?
+3.  ¿Cómo nos ayudó a resolver este reto trabajar en equipo y usar nuestra lógica?
+¡Son unos verdaderos genios del CODE SQUAD!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+               <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+        }
+    }
+
+    function updateContent() {
+        var time = document.getElementById("class-time").value;
+        var level = document.getElementById("class-level").value;
+        document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+        document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+        var steps = {
+    "K1": {
+        "5.1": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                 "accion": "Reproduce la DIAPOSITIVA 8 y explica cómo crear el código para resolver el reto",
+                "dialogo": "¡CODE SQUAD! Para ayudar al director del parque, vamos a crear un código para guiar a todos a los insectos musicales. Usaremos fichas rectas para representar los caminos que van de frente y fichas de esquina para los giros. Cada insecto, como la mariposa o el grillo, tendrá su propio camino. ¡Vamos a dibujar los caminos y prepararnos para construir con fichas!"
+            },
+            {
+                 "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion": "Reproduce la DIAPOSITIVA 9, distribuye los materiales y asegúrate de que todos tengan lo necesario.",
+                 "dialogo":"Aquí tienen sus hojas y colores, Genios. Ahora, dibujen en sus hojas el camino que va a cada insecto musical, como la mariposa y el grillo. Al lado de cada camino, dibujen las fichas que usarán para guiar a Dart, ya sean rectas o de esquina. ¡Prepárense para codificar con lógica y creatividad!"
+            },
+            {
+                 "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                 "accion": "Reproduce la DIAPOSITIVA 10 y supervisa la creación del código en pares. Ayuda a los equipos mientras dibujan y asignan fichas de ruta.",
+                 "dialogo":"¡Excelente, CODE SQUAD! Ahora dibujen los caminos y elijan las fichas que mejor los representen: recta para ir derecho, esquina para doblar. Recuerden poner el signo '=' entre el camino y la ficha. ¡Usen su lógica y creatividad para crear caminos musicales!"
+            }
+        ],
+        "6": [
+            {
+                 "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 17 y dirige a los Genios para que intercambien los códigos que hicieron.",
+                "dialogo":"¡Increíble trabajo, Genios del CODE SQUAD! Ahora vamos a compartir nuestros códigos para que todos los insectos del parque tengan caminos perfectos. Recogeré sus códigos, les pondré un nombre y se los daré a otro equipo. ¡Vamos a trabajar juntos y a poner a prueba nuestra lógica!"
+            },
+            {
+                 "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 18 y distribuye los códigos asignados para que cada equipo comience a construir.",
+                 "dialogo":"¡Manos a la obra, Genios! Con el código que recibieron, usen las fichas rectas y de esquina para construir el camino a cada insecto. Sigan el código con atención para que Dart pueda recorrer el parque y todos disfruten de la música. ¡Vamos a demostrar nuestra gran lógica y trabajo en equipo!"
+            }
+        ],
+        "7": [
+            {
+                 "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                 "accion":"Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los Genios.",
+                 "dialogo":"¡CODE SQUAD! ¡Emergencia en el Parque de los Insectos Musicales! Justo cuando terminábamos, un viento travieso ha desordenado los caminos. ¡Oh no! Pero no se preocupen, el cuartel general nos ha enviado un nuevo código de rescate. ¡Vamos a usar toda nuestra lógica para resolver este nuevo reto juntos!"
+            },
+           {
+                 "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 22 “Código de Rescate K1” y motiva a los Genios que sigan el nuevo código proyectado en la pantalla.",
+                "dialogo": "¡Atención, CODE SQUAD! Aquí está el “Código de Rescate del Parque”. Usen fichas rectas y de esquina para construir los nuevos caminos, sigan el patrón con cuidado y asegúrense de que Dart pueda recorrerlos. ¡Confío en su gran lógica y creatividad!"
+            }
+        ]
+    },
+   "K2": {
+        "5.2": [
+            {
+                 "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                 "accion":"Reproduce la DIAPOSITIVA 11 y explica cómo crear el código para resolver el reto.",
+                "dialogo":"¡CODE SQUAD! Para ayudar al director del parque, vamos a crear un código para guiar a todos por el parque. Usaremos fichas rectas, de esquina y con una curva simple para representar los diferentes caminos. Cada insecto musical, como la mariposa, el grillo y la abeja, tendrá su propio camino. Por ejemplo, un camino con una pequeña curva se puede representar con una ficha curva simple. ¡Vamos a usar nuestra lógica para crear este código!"
+            },
+           {
+                 "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 12, distribuye los materiales y asegúrate de que todos tengan lo necesario.",
+                "dialogo":"Aquí tienen sus hojas y colores, Genios. Ahora, dibujen en sus hojas el camino a cada insecto musical y al lado dibujen la ficha que lo represente, ya sea recta, de esquina o con curva simple. Recuerden, cada ficha representa un tipo de movimiento. ¡Prepárense para codificar con lógica y creatividad!"
+            },
+            {
+                 "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion":"Reproduce la DIAPOSITIVA 13 y supervisa la creación del código en pares. Ayuda a los equipos mientras dibujan y asignan fichas de ruta.",
+                "dialogo":"¡Muy bien, CODE SQUAD! Dibujen los caminos y elijan las fichas que los representen: recta, esquina o con curva simple. Recuerden escribir el símbolo '=' entre el camino y la ficha para que todo quede claro. ¡Usen su lógica y trabajen juntos para que los caminos sean geniales!"
+            }
+        ],
+        "6": [
+           {
+                 "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion":"Reproduce la DIAPOSITIVA 17 y dirige a los Genios para que intercambien los códigos que hicieron.",
+                 "dialogo":"¡Excelente trabajo, Genios del CODE SQUAD! Ahora vamos a intercambiar los códigos para que el parque tenga caminos perfectos. Recogeré sus códigos, les pondré un nombre y se los daré a otro equipo. ¡Vamos a trabajar en equipo para ayudar al parque y demostrar nuestra gran lógica!"
+            },
+            {
+                 "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 19 y distribuye los códigos asignados para que cada equipo comience a construir.",
+                "dialogo":"¡Manos a la obra, Genios! Con el código que recibieron, usen las fichas rectas, de esquina y con curva simple para construir los caminos a cada insecto musical. Sigan el código con atención para que Dart pueda recorrer el parque sin problemas. ¡Con su lógica y trabajo en equipo vamos a organizar la música del parque!"
+            }
+        ],
+        "7": [
+           {
+                 "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                 "accion":"Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los Genios.",
+                 "dialogo":"¡CODE SQUAD! ¡Emergencia en el Parque de los Insectos Musicales! Unos pajaritos juguetones movieron las hojas e hicieron que los caminos se desordenaran. ¡Oh no! Pero no se preocupen, el cuartel general nos ha enviado un nuevo código de rescate. ¡Vamos a usar toda nuestra lógica para resolver este reto juntos!"
+            },
+            {
+                 "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 23 “Código de Rescate K2” y motiva a los Genios que sigan el nuevo código proyectado en la pantalla.",
+                 "dialogo":"¡Atención, Genios del CODE SQUAD! Aquí tienen el “Código de Rescate del Parque de los Insectos Musicales”. Usen las fichas rectas, de esquina y curvas simples para reconstruir los caminos. Sigan el patrón con atención para que Dart pueda llegar a todos los insectos musicales. ¡Confío en su lógica y en su trabajo en equipo!"
+            }
+        ]
+},
+    "K3": {
+        "5.3": [
+            {
+                 "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                 "accion":"Reproduce la DIAPOSITIVA 14 y explica cómo crear el código para resolver el reto.",
+                "dialogo":"¡CODE SQUAD! Para que todos en el parque puedan disfrutar de la música, vamos a crear un código para los caminos. Usaremos fichas rectas, de esquina, con curva simple y con curva doble para representar los caminos a la mariposa, el grillo, la abeja y la libélula. Cada insecto tendrá su código, dibujando cada ruta en papel. Por ejemplo, un camino con dos curvas se representa con una ficha de curva doble. ¡Vamos a demostrar nuestra gran lógica y creatividad!"
+            },
+            {
+                 "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 15, distribuye los materiales y asegúrate de que todos tengan lo necesario.",
+                 "dialogo":"Aquí tienen sus hojas y colores, Genios. Dibujen cada camino del parque y pongan al lado la ficha que lo representa: recta, esquina, curva simple o curva doble. Recuerden que cada ficha indica un movimiento diferente. ¡Prepárense para usar toda su lógica!"
+            },
+            {
+                 "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion":"Reproduce la DIAPOSITIVA 16 y supervisa la creación del código en pares. Ayuda a los equipos mientras dibujan y fichas de ruta.",
+                 "dialogo":"¡Excelente trabajo, CODE SQUAD! Dibujen los caminos con mucho cuidado, escriban el signo '=' y elijan las fichas que los representen: recta, esquina, curva simple o curva doble. ¡Trabajen en equipo y creen caminos musicales geniales con su lógica!"
+            }
+        ],
+        "6": [
+            {
+                 "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 17 y dirige a los Genios para que intercambien los códigos que hicieron.",
+                "dialogo":"¡CODE SQUAD, impresionante! Ahora vamos a compartir los códigos para que todos los insectos del parque tengan sus caminos organizados. Recogeré sus códigos, les pondré un nombre y se los daré a otro equipo. ¡Vamos a trabajar juntos y a mostrar lo bien que podemos usar nuestra lógica!"
+            },
+             {
+                 "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 20 y distribuye los códigos asignados para que cada equipo comience a construir.",
+                "dialogo":"¡Adelante, Genios! Con el código que recibieron, usen las fichas rectas, de esquina, curvas simples y dobles para construir los caminos a cada insecto musical. Sigan el código con atención para que Dart pueda recorrer todo el parque sin problemas. ¡Con su lógica y trabajo en equipo, vamos a lograr que la música nunca se detenga!"
+            }
+        ],
+        "7": [
+            {
+                 "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                 "accion":"Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los Genios.",
+                "dialogo": "¡CODE SQUAD! ¡Emergencia en el Parque de los Insectos Musicales! Unos pajaritos traviesos han movido los caminos y ahora los insectos no pueden tocar su música. ¡Oh, no! Pero no se preocupen, el cuartel general nos ha enviado un nuevo código de rescate. ¡Vamos a usar nuestra lógica y a resolver este reto juntos!"
+            },
+            {
+                 "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion":"Reproduce la DIAPOSITIVA 24 y motiva a los Genios a construir el nuevo código con bloques siguiendo el patrón proyectado.",
+                "dialogo": "¡Equipo CODE SQUAD! Aquí tienen el “Código de Rescate del Parque de los Insectos Musicales”. Usen las fichas rectas, de esquina, curvas simples y dobles para reconstruir los caminos. Sigan el código con cuidado y ayuden a Dart a llegar a cada insecto musical de forma segura. ¡Con su lógica y trabajo en equipo, vamos a lograrlo!"
+            }
+        ]
+    }
+};
+
+
+
+        // Mostrar u ocultar actividades según el nivel seleccionado
+        var activities = {
+            "activity-0": true,
+            "activity-1": true,
+            "activity-2": true,
+            "activity-3": true,
+            "activity-4": true,
+            "activity-5": true,
+            "activity-6": true,
+            "activity-7": steps[level]["7"].some(s => s.time[time] > 0),
+            "activity-8": true
+        };
+
+        Object.keys(activities).forEach(function(activityId) {
+            var activityElement = document.getElementById(activityId);
+            if (activities[activityId]) {
+                activityElement.style.display = "block";
+            } else {
+                activityElement.style.display = "none";
+            }
+        });
+
+        // Renderizar los pasos dinámicamente en las tablas de actividades 5, 6 y 7
+        renderActivitySteps("activity-5-content", steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+        renderActivitySteps("activity-6-content", steps[level]["6"], time);
+        renderActivitySteps("activity-7-content", steps[level]["7"], time);
+
+        document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+        document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+        document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+    }
+
+    function renderActivitySteps(contentId, steps, time) {
+        var contentContainer = document.getElementById(contentId);
+        contentContainer.innerHTML = "";
+        steps.forEach(function(step) {
+            if (step.time[time] > 0) {
+                var row = document.createElement("tr");
+                var stepCell = document.createElement("td");
+                var dialogCell = document.createElement("td");
+
+                stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong> " + step.accion;
+                dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                row.appendChild(stepCell);
+                row.appendChild(dialogCell);
+                contentContainer.appendChild(row);
+            }
+        });
+    }
+
+    function calculateTotalTime(steps, time) {
+        return steps.reduce((total, step) => total + step.time[time], 0);
+    }
+
+    updateContent();
+</script>
+</body>
+</html>
